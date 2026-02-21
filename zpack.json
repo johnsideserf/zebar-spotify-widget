@@ -1,0 +1,46 @@
+{
+  "$schema": "https://github.com/glzr-io/zebar/raw/v3.0.0/resources/zpack-schema.json",
+  "name": "spotify-widget",
+  "version": "1.0.0",
+  "description": "A Spotify now-playing widget for Zebar with scrolling track info and playback controls (prev, play/pause, next). Tokyo Night themed.",
+  "tags": ["spotify", "media", "music", "now-playing"],
+  "previewImages": ["./preview.png"],
+  "repositoryUrl": "",
+  "widgets": [
+    {
+      "name": "spotify",
+      "htmlPath": "./spotify.html",
+      "zOrder": "normal",
+      "shownInTaskbar": false,
+      "focused": false,
+      "resizable": false,
+      "transparent": true,
+      "includeFiles": ["*.html", "*.css"],
+      "caching": {
+        "defaultDuration": 604800,
+        "rules": []
+      },
+      "privileges": {
+        "shellCommands": []
+      },
+      "presets": [
+        {
+          "name": "default",
+          "anchor": "top_right",
+          "offsetX": "-8px",
+          "offsetY": "4px",
+          "width": "340px",
+          "height": "40px",
+          "monitorSelection": {
+            "type": "all"
+          },
+          "dockToEdge": {
+            "enabled": false,
+            "edge": null,
+            "windowMargin": "0px"
+          }
+        }
+      ]
+    }
+  ]
+}

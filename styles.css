@@ -1,0 +1,104 @@
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
+:root {
+  --font-size: 12px;
+  --icon-size: 12px;
+
+  /* Tokyo Night palette — override these to match your theme */
+  --bg: rgba(13 14 22 / 92%);
+  --fg: #a9b1d6;
+  --accent: #9ece6a;
+  --controls: #bb9af7;
+  --controls-hover: #7aa2f7;
+  --muted: #565f89;
+  --border: rgba(122 162 247 / 15%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: ui-monospace, monospace;
+  font-size: var(--font-size);
+  color: var(--fg);
+  overflow: hidden;
+}
+
+#root {
+  background: var(--bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+i {
+  font-size: var(--icon-size);
+}
+
+.spotify-widget {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.spotify-icon {
+  color: var(--accent);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Scrolling track info */
+.track-info {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0, #fff 6px, #fff calc(100% - 6px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #fff 6px, #fff calc(100% - 6px), transparent 100%);
+}
+
+.track-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll 12s linear infinite;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Playback controls */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.ctrl-btn {
+  background: none;
+  border: none;
+  padding: 2px 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.ctrl-btn i {
+  color: var(--controls);
+  font-size: var(--icon-size);
+  transition: color 0.15s ease;
+}
+
+.ctrl-btn:hover i {
+  color: var(--controls-hover);
+}
