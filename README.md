@@ -2,8 +2,6 @@
 
 A minimal Spotify now-playing widget for [Zebar](https://github.com/glzr-io/zebar). Shows the currently playing track with scrolling text and playback controls.
 
-![Preview](./preview.png)
-
 ## Features
 
 - Spotify icon with scrolling track title and artist
