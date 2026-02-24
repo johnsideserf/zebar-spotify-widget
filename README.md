@@ -190,3 +190,7 @@ For the **embedded version**, the styles use Tokyo Night variables (`--tn-green`
 ### Scroll speed
 
 Change the `pixelsPerSecond` value in the `useLayoutEffect` block. Higher values = faster scrolling. Default is `50`.
+
+---
+
+Part of my [Windows rice](https://github.com/johnsideserf/windows-ricing). See also: [zebar-app-launcher](https://github.com/johnsideserf/zebar-app-launcher) | [zebar-doom-widget](https://github.com/johnsideserf/zebar-doom-widget)
